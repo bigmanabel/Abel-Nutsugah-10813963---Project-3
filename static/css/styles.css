@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    background: url('/static/img/home-bg.jpg');
+    background-size: cover;
+}
+
+nav{
+    margin: 0;
+    overflow: hidden;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav  ul li a{
+    color: white;
+    display: block;
+    line-height: 3em;
+    padding: 1em 3em;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+}
+
+nav ul li:first-child{
+    margin-right: auto;
+}
+
+.login{
+    background-color: white;
+    width: 200px;
+    padding: 20px;
+    border-radius: 5px;
+}
