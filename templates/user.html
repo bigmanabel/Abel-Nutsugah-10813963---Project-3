@@ -1,0 +1,41 @@
+{% extends 'layout.html' %} 
+
+{% block body %}
+<div class="container table-responsive-sm">
+  {% if flights|length < 1 %}
+      <h4>You have no bookings. <a class="text-decoration-none" href="{{url_for('booking')}}">Book a flight</a></h4>
+  {% else %}
+  <div class="d-flex justify-content-right"><a class="btn btn-primary" href="{{url_for('booking')}}" role="button">Add a Booking</a></div><br>
+<table class="table align-middle">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Origin</th>
+      <th scope="col">Destination</th>
+      <th scope="col">Departing Date</th>
+      <th scope="col">Returning Date</th>
+      <th scope="col">Cabin Class</th>
+      <th scope="col">Ticket Type</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+      {% for flight in flights %}
+        <tr>
+      <th scope="row">{{flight.id}}</th>
+      <td>{{flight.origin}}</td>
+      <td>{{flight.destination}}</td>
+      <td>{{flight.departing_date}}</td>
+      <td>{{flight.returning_date}}</td>
+      <td>{{flight.cabin_class}}</td>
+      <td>{{flight.ticket_type}}</td>
+      <td><a class="btn btn-primary" href="/update/{{flight.id}}" role="button">Update</a></td>
+      <td><a class="btn btn-primary btn-danger" href="/delete/{{flight.id}}" role="button">Delete</a></td>
+    </tr>
+      {% endfor %}
+  </tbody>
+</table>
+  {% endif %}
+</div>
+{% endblock body %}

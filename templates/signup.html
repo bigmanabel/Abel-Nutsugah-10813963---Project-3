@@ -1,20 +1,23 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-        <div class="login">
-        <form action="" method="post">
-            <label for="">Full Name</label><br>
-            <input type="text" name="fullname" id="fullname"><br><br>
-            <label for="">Username</label>
-            <input type="text" name="username" id="username"><br><br>
-            <label for="">Email</label><br>
-            <input type="text" name="email" id="email"><br><br>
-            <label for="">Password</label><br>
-            <input type="password" name="password" id="password"><br><br>
-            <label for="">Confirm Password</label>
-            <input type="password" name="cpassword" id="cpassword"><br><br>
-            <input type="submit" value="Sign Up">
-            <p>Not a member? <a href="{{url_for('signUp')}}">Sign Up</a></p>
-        </form>
+    <div class="container-fluid">
+        <div class="row justify-content-center m-3 t-3">
+            <div class="col-12 col-sm-6 col-md-3 position-absolute">
+            <form class="form-control p-3" action="" method="post">
+                <div class="form-text text-center">Create a user account.</div><br>
+                <label class="form-label" for="">Full Name</label><br>
+                <input class="form-control form-control-sm" type="text" name="fullname" id="fullname"><br>
+                <label class="form-label" for="">Email</label><br>
+                <input class="form-control form-control-sm" type="text" name="email" id="email"><br>
+                <label class="form-label" for="">Password</label><br>
+                <input class="form-control form-control-sm" type="password" name="password" id="password"><br>
+                <label class="form-label" for="">Confirm Password</label><br>
+                <input class="form-control form-control-sm" type="password" name="cpassword" id="cpassword"><br>
+                <button type="submit" class="btn btn-primary">Sign up</button><br><br>
+                <div class="form-text text-center">Already a member? <a class="text-decoration-none" href="{{url_for('index')}}">Sign in</a></div>
+            </form>
+            </div>
+        </div>
     </div>
 {% endblock body %}

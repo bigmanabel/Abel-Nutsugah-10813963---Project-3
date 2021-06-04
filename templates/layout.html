@@ -18,7 +18,7 @@
             <div class="collapse navbar-collapse" id="toggleMobileMenu">
                 <ul class="navbar-nav ms-auto text-center">
                     <li><a class="nav-link" href="{{url_for('index')}}">Home</a></li>
-                    <li><a class="nav-link" href="{{url_for('booking')}}">Booking</a></li>
+                    <li><a class="nav-link" href="{{url_for('user')}}">My Bookings</a></li>
                     <li><a class="nav-link" href="{{url_for('about')}}">About</a></li>
                     <li><a class="nav-link" href="{{url_for('support')}}">Support</a></li>
                     <li><a class="nav-link" href="{{url_for('logout')}}">{{logout}}</a></li>
@@ -26,18 +26,9 @@
             </div>
         </nav>
     </div>
-    <!--
-         <nav>
-        <ul>
-            <li><a href="{{url_for('index')}}" class="logo">Trvlr</a></li>
-            <li><a href="{{url_for('index')}}">Home</a></li>
-            <li><a href="{{url_for('booking')}}">Booking</a></li>
-            <li><a href="{{url_for('about')}}">About</a></li>
-            <li><a href="{{url_for('support')}}">Support</a></li>
-            <li><a href="{{url_for('logout')}}">{{logout}}</a></li>
-        </ul>
-    </nav>
-    -->
+    {% block body %}
+        
+    {% endblock body %}
 
     <script src="/static/js/bootstrap.min.js"></script>
 </body>

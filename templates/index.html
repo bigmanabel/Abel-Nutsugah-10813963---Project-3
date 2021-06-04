@@ -1,16 +1,20 @@
 {% extends 'layout.html' %} 
 
 {% block body %}
-    <div class="login">
-        <form action="" method="post">
-            <label for="">Email</label><br>
-            <input type="text" name="email" id="email"><br><br>
-            <label for="">Password</label><br>
-            <input type="password" name="password" id="password"><br><br>
-            <input type="submit" value="Log In">
-            <p>Not a member? <a href="{{url_for('signUp')}}">Sign Up</a></p>
-        </form>
+    <div class="container-fluid">
+        <div class="row justify-content-center p-3 m-3 t-3">
+            <div class="col-12 col-sm-6 col-md-3 position-absolute">
+                <form class="form-control p-3" action="" method="post">
+                    <div class="form-text text-center">Log in to your account.</div><br>
+                    <label class="form-label" for="">Email</label><br>
+                    <input class="form-control form-control-sm" type="text" name="email" id="email"><br>
+                    <label class="form-label" for="">Password</label><br>
+                    <input class="form-control form-control-sm" type="password" name="password" id="password"><br>
+                    <button type="submit" class="btn btn-primary">Sign in</button><br><br>
+                    <div class="form-text text-center">Not a member? <a class="text-decoration-none" href="{{url_for('signUp')}}">Sign up</a></div>
+                </form>
+            </div>
+        </div>
     </div>
-    
 {% endblock body %}
     
